@@ -61,9 +61,7 @@ const Home = ({ mainData,dataUser, setDataUser, hidden, setHidden, showHome,setS
                                 variant="info">I don´t vape, but am a supporter</Button>
                     </Col> */}
         </Row>
-
         </div>
-        
       </Container>
     </Fragment>
   );
