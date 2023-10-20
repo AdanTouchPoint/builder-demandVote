@@ -114,7 +114,6 @@ setValidated(true)
                       required
                     />
                   </Form.Group>
-            
               )
             })}
           <Form.Group style={{textAlign: "justify", padding:"15px"}} controlId="conditions">
