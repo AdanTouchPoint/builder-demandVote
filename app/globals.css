@@ -1,0 +1,49 @@
+h1 {
+    padding: 3rem 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+h2 {
+    padding: 2rem 0;
+}
+header {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+    max-width: 1140px;
+    width:90%;
+    padding: 3rem !important;
+    background-color: white;
+    box-shadow: -15px 15px lightslategray;
+    margin-bottom: 3rem;
+
+}
+.containerText {
+    text-align: center;
+    width:100%;
+    padding-bottom: 3rem;
+    margin: 3rem 3rem ;
+    background-color: white;
+    box-shadow: -15px 15px lightslategray;
+}
+.footer {
+
+    background-color: white;
+    text-align: center;
+}
+.select-label{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .field {
+        justify-content: center;
+        width:100%;
+        text-align: left;
+      }
+
