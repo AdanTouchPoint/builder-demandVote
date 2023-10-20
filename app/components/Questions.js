@@ -61,7 +61,7 @@ dataQuestions,
       style={{ justifyContent: "center", display: "flex" }}
     >
       <div style={{ maxWidth: "700px", width: "100%" }}>
-        <h2>Create a Submission </h2>
+        <h2>Craft your email</h2>
         {error ? (
           <Alert variant={"danger"}>All fields are required!</Alert>
         ) : null}
