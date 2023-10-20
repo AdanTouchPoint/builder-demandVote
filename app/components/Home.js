@@ -27,7 +27,7 @@ const Home = ({ mainData,dataUser, setDataUser, hidden, setHidden, showHome,setS
   };
   return (
     <Fragment  >
-      <Container  hidden={showHome}>
+      <Container hidden={showHome}>
         <div >
         <Row>
           <Col>

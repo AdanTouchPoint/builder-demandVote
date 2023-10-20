@@ -109,7 +109,7 @@ setValidated(true)
                       id={field.type}
                       type={field.type}
                       placeholder={field.placeholder}
-                      name={field.type === "name" ? "userName": field.type}
+                      name={field?.type === "name" ? "userName": field.type}
                       onChange={handleChange}
                       required
                     />

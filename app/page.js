@@ -76,9 +76,6 @@ subject:''
         }
         fetchData()
     },[])
-    
-
-
     return(
       <>
         {/* <LoadingMainForm/> */}

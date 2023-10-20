@@ -3,7 +3,7 @@ import Button from "react-bootstrap/cjs/Button";
 import Card from "react-bootstrap/Card";
 import { fetchData } from "../assets/petitions/fetchData";
 import { fetchLeads } from "../assets/petitions/fetchLeads";
-import { Alert } from "bootstrap";
+import Alert from "react-bootstrap/Alert";
 const QuestionsView = ({
   questions,
   dataUser,
@@ -19,9 +19,7 @@ const QuestionsView = ({
   backendURLBase,
   emailData,
   setLeads,
-  leads,
-  showHome,
-  setShowHome
+  leads
 }) => {
   const { name, lastName } = dataUser;
 const elements = (questions) => {
