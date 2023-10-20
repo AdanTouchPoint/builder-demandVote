@@ -4,9 +4,12 @@ import Card from "react-bootstrap/Card";
 import { fetchData } from "../assets/petitions/fetchData";
 import { fetchLeads } from "../assets/petitions/fetchLeads";
 import Alert from "react-bootstrap/Alert";
+import Form from "react-bootstrap/Form";
+
 const QuestionsView = ({
   questions,
   dataUser,
+  setDataUser,
   setShowThankYou,
   setHidden,
   setShowQuestions,
@@ -32,10 +35,21 @@ return Object.keys(questions).map((clave) => (
    ))
   ));
 }
+const back = (e) => {
+  e.preventDefault();
+  setShowQuestionsView(false);
+};
+const handleChange = (e) => {
+  setDataUser({
+    ...dataUser,
+    [e.target.name]: e.target.value,
+  });
+};
   const hoy = new Date();
   const today = hoy.toDateString();
   const click = async (e) => {
     e.preventDefault();
+    let message = JSON.stringify(questions)
     setShowThankYou(false);
     setShowQuestions(true);
     setHidden(true);
@@ -45,7 +59,7 @@ return Object.keys(questions).map((clave) => (
       backendURLBaseServices,
       endpoints.toSendEmails,
       clientId,
-      `questions=${JSON.stringify(questions)}&user=${JSON.stringify(dataUser)}`
+      `questions=${message}&user=${JSON.stringify(dataUser)}`
     );
         if (payload.success === true) {
       fetchLeads(
@@ -54,11 +68,9 @@ return Object.keys(questions).map((clave) => (
         endpoints,
         clientId,
         dataUser,
-        emailData,
-        questions
+        message
       );
       setShowThankYou(false);
-      setLeads(leads+1)
     }
     if (payload.success !== true) {
       fetchLeads(
@@ -67,20 +79,17 @@ return Object.keys(questions).map((clave) => (
         endpoints,
         clientId,
         dataUser,
-        emailData,
-        questions
+        message
       );
-      setLeads(leads+1)
       return (
         <Alert>
-          El correo no ha sido enviado con éxito, por favor intente de nuevo más
-          tarde
+        The email has not been sent successfully, please try again again late
           <Button
             className={"button-email-form"}
             variant={"dark"}
             onClick={back}
           >
-            Regresar
+            Back
           </Button>
         </Alert>
       );
@@ -95,20 +104,19 @@ return Object.keys(questions).map((clave) => (
       <div style={{ maxWidth: "700px", width: "100%" }}>
         <h2>{mainData.titlePreview}</h2>
         <p>{mainData.intructionsPreview}</p>
-
+        <Form.Group className="field">
+                    <Form.Label className="select-label">subject</Form.Label>
+                    <Form.Control
+                      id={"subject"}
+                      type={"text"}
+                      placeholder={"subject"}
+                      name={"subject"}
+                      onChange={handleChange}
+                      required
+                    />
+                  </Form.Group>
         <div style={{ textAlign: "left" }}>
           <Card body>
-            <p>
-              {today} <br />
-              Committee Secretariat Government Committee
-              <br />
-              Parliament Address Line 1 <br />
-              Parliament Address Line 2 <br />
-              Parliament Address Line 3<br />
-            </p>
-            <p>
-              Submission by {name} {lastName} - {today}
-            </p>
             <div>
             {
             questions? elements(questions) : null

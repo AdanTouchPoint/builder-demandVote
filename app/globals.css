@@ -15,7 +15,7 @@ header {
     text-align: center;
     max-width: 1140px;
     width:90%;
-    padding: 3rem !important;
+    padding: 1rem !important;
     background-color: white;
     box-shadow: -15px 15px lightslategray;
     margin-bottom: 3rem;
@@ -35,7 +35,7 @@ header {
     text-align: center;
 }
 .select-label{
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-size: 18px;
     text-align: left;
@@ -45,5 +45,6 @@ header {
         justify-content: center;
         width:100%;
         text-align: left;
+        padding-bottom: 10px;
       }
 

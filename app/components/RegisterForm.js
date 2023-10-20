@@ -88,7 +88,6 @@ setValidated(true)
       style={{ justifyContent: "center", display: "flex" }}
     >
       <div style={{ maxWidth: "700px", width: "100%" }}>
-        <h1>Register</h1>
         {error ? (
           <Alert variant={"danger"}>Fill all fields or type correct email </Alert>
         ) : null}

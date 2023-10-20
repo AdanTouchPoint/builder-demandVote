@@ -5,27 +5,40 @@ const fetchLeads = (
   endpoints,
   clientId,
   dataUser,
-  questions
+  message
 ) => {
+  console.log(message)
   fetchData(
     "POST",
     backendURLBase,
     endpoints.toSaveLeads,
     clientId,
-    `&firstName=${dataUser.userName ? dataUser.userName : dataUser.emailUser}&postalcode=${
+    `&firstName=${
+      dataUser.userName ? dataUser.userName : dataUser.emailUser
+    }&postalcode=${
       dataUser.postalCode ? dataUser.postalCode : "N/A"
     }&emailData=${dataUser.emailUser}&representative=${
       dataUser.email
-    }&emailMessage=${JSON.stringify(questions)}&sended=${successResponse}`
+    }&emailMessage=${message}&subject=${
+      dataUser.subject
+    }&party=${dataUser.party}&sended=${successResponse}`
   );
 };
+const fetchAllLeads = async (
+  petitionMethod,
+  backendURLBase,
+  endpoint,
+  clientId,
+  setLeads
+) => {
+  const leads = await fetchData(
+    petitionMethod,
+    backendURLBase,
+    endpoint,
+    clientId
+  );
+  const data = leads.data;
+  setLeads(data);
+};
 
-const fetchAllLeads = async (petitionMethod,backendURLBase, endpoint, clientId, setLeads) => {
-  const  leads = await fetchData(petitionMethod, backendURLBase, endpoint, clientId)
-   const data = leads.data
-   setLeads(data)
-}
-
-export {
-   fetchLeads, fetchAllLeads
-}
+export { fetchLeads, fetchAllLeads };
