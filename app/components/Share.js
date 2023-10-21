@@ -4,7 +4,7 @@ import "./share.css";
 const Share = ({shareMessage,shareUrl }) => {  
   return (
     <div >
-      <FacebookShareButton url={shareUrl? shareUrl: 'Fill this in your dashboard'} quote={shareMessage? shareMessage.replace(/"/g, '&quot;') :  'Fill this in your dashboard'} hashtag="#yodecidocomomemuevo" className="share-buttons">
+      <FacebookShareButton url={shareUrl? shareUrl: 'Fill this in your dashboard'} quote={shareMessage? shareMessage.replace(/"/g, '&quot;') :  'Fill this in your dashboard'} className="share-buttons">
       <FacebookIcon size={32} round={true} />
       </FacebookShareButton>
       <TwitterShareButton url={shareUrl? shareUrl: 'Fill this in your dashboard'} title={shareMessage? shareMessage : 'Fill this in your dashboard'}className="share-buttons">
