@@ -73,7 +73,7 @@ const fieldValidator = () => {
 setValidated(true)
     if (
       fieldValidator() === false || 
-      tac  === false 
+      tac  === false  ||  Object.getOwnPropertyNames(dataUser).length === 0 || dataUser.userName === undefined  || dataUser.emailUser === undefined
     ) {
       setError(true);
       return;

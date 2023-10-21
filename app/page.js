@@ -17,9 +17,9 @@ function Home() {
     userName: ''
   })
   const [dataUser, setDataUser] = useState({
-email:'user@mail.com',
+email:'',
 subject:'',
-userName:'user'
+userName:''
   })
       const [backendURLBase] = useState(`${process.env.NEXT_PUBLIC_URL}`)
       const [backendURLBaseServices] = useState(`${process.env.NEXT_PUBLIC_URL_SERVICES}`)
