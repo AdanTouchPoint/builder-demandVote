@@ -7,7 +7,7 @@ h2 {
     padding: 2rem 0;
 }
 header {
-    padding: 0rem ;
+    padding: 0rem !important;
     text-align: center;
 }
 

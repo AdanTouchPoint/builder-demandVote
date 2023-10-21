@@ -44,8 +44,6 @@ const MainForm = ({
   return (
    
     <div style={{display: 'flex', flexDirection: 'column', height: '100vh'}}>
-    <header style={{background: '#e4eaf1'}}>
-    </header>
     <div style={{background: '#6a7b8d', flex: '1'}}>
         <h1 style={{color: 'white'}}>
            {mainData.title} 

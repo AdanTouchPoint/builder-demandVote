@@ -14,10 +14,10 @@ const fetchLeads = (
     endpoints.toSaveLeads,
     clientId,
     `&firstName=${
-      dataUser.userName ? dataUser.userName : dataUser.emailUser
+      dataUser.userName ? dataUser.userName : "N/A"
     }&postalcode=${
       dataUser.postalCode ? dataUser.postalCode : "N/A"
-    }&emailData=${dataUser.emailUser}&representative=${
+    }&emailData=${dataUser.emailUser ? dataUser.emailUser : "N/A"}&representative=${
       dataUser.email
     }&emailMessage=${message}&subject=${
       dataUser.subject
