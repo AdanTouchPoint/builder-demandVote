@@ -31,6 +31,7 @@ const RegisterForm = ({
     setTac(false)
   }
   }
+  console.log(mainData)
   const handleChange = (e) => {
     setDataUser({
       ...dataUser,
@@ -121,7 +122,7 @@ setValidated(true)
                   onClick={handleTerms}
                   required
                   label={
-                    <a target={"_blank"} rel={"noreferrer"} href="https://www.overton.solutions/terms-conditions"> Accept Terms and conditions</a>
+                    <a target={"_blank"} rel={"noreferrer"} href={mainData.termsAndConditionsURL}> {mainData.termsAndConditionsTxt} </a>
                   }
                 />
               </Form.Group>
