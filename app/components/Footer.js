@@ -9,7 +9,7 @@ const Footer = () => {
 
     return (
 <div className={"footer"}>
-            <Card.Footer>Overton Corporation PTY LTD</Card.Footer>
+            <Card.Footer></Card.Footer>
 
 </div>
 
